@@ -66,15 +66,14 @@
 							<section id="one">
 								<div class="container">
 									<h3>IIIF : c'est quoi ?</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer lorem ipsum dolor sit amet.</p>
+									<p>IIIF (pour <i>International Image Interoperability Framework</i>) est le nom d’une initiative lancée par l’Université de Stanford et par plusieurs grandes bibliothèques nationales - dont la Bibliothèque nationale de France -, dans le but de normaliser les méthodes de manipulation des images numériques. Concrètement, ce projet a abouti à définir un ensemble de spécifications dont l’objectif est de doter les bibliothèques numériques d’un cadre technique commun pour la diffusion et la manipulation des images. Du point de vue de l’expérience utilisateur, ce cadre offre de nouvelles possibilités pour exploiter les documents et rend possible les usages suivants :</p>							
 									<ul class="feature-icons">
-										<li class="fa-code">Write all the code</li>
-										<li class="fa-cubes">Stack small boxes</li>
-										<li class="fa-book">Read books and stuff</li>
-										<li class="fa-coffee">Drink much coffee</li>
-										<li class="fa-bolt">Lightning bolt</li>
-										<li class="fa-users">Shadow clone technique</li>
+										<li class="fa-code">en utilisant une visionneuse compatible IIIF (Mirador, Universal Viewer, etc...), juxtaposer dans la même interface de consultation des documents issus de bibliothèques numériques différentes ; </li>
+										<li class="fa-cubes">associer dans une même présentation plusieurs états d’un même document, par exemple pour montrer la page d'un manuscrit découpé avec ou sans la partie qui en a été détachée ;</li>
+										<li class="fa-book">extraire ou citer précisément une partie d'une image ;</li>
+										<li>utiliser une application tierce pour annoter les images d'une bibliothèque numérique. </li>
 									</ul>
+									<p>Sur le plan technique, l'initiative IIIF a rendu ces opérations possibles en définissant plusieurs API (pour <i>application programming interface</i>, interface de programmation), dont les plus importantes sont les API Image et Présentation, qui définissent les normes d'exposition des images et de leurs métadonnées. L'API présentation expose les métadonnées concernant les images et la structure des documents dans un fichier appelé manifest.</p>
 								</div>
 							</section>
 							<section id="two">
@@ -82,8 +81,13 @@
 								<div class="container">
 																	<h3>Et à l'INHA ?</h3>
 
-									<p>Faucibus sed lobortis aliquam lorem blandit. Lorem eu nunc metus col. Commodo id in arcu ante lorem ipsum sed accumsan erat praesent faucibus commodo ac mi lacus. Adipiscing mi ac commodo. Vis aliquet tortor ultricies non ante erat nunc integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum.</p>
-									
+									<p>Une visionneuse libre compatible avec IIIF a été choisie par l'INHA et mise à disposition pour expérimentation : <a href="https://iiif.inha.fr/mirador.html">Mirador</a>. Par ailleurs, les collections et projets suivants sont manipulables avec le protocole IIIF :</p>
+									<ul>
+										<li><a href="https://bibliotheque-numerique.inha.fr/">la bibliothèque numérique de l'INHA</a> ;</li>
+										<li><a href="https://digitalmuret.inha.fr/s/digital-muret/page/accueil">le projet Digital Muret</a>.</li>
+									</ul>
+									<p>Dans la bibliothèque numérique, l'adresse URI du manifest IIIF d'un document se trouve dans sa notice, signalé par l'icône <img src="https://bibliotheque-numerique.inha.fr/themes/INHA/images/logo-iiif-34x30_60pc.png">. Il est possible d'utiliser cette URI pour ajouter l'image à une collection d'objets numériques dans une visionneuse compatible avec IIIF.</p>
+									<p>Par ailleurs, l'API Image offre de larges possibilités pour manipuler les images de la bibliothèque numérique. Elle définit en effet pour chaque image une URI dont la forme doit respecter la syntaxe suivante : {scheme}://{server}{/prefix}/{identifier}/{region}/{size}/{rotation}/{quality}.{format}, chacune des valeurs entre crochet correspondant à un paramètre de présentation potentiellement modifiable. Il est par conséquent possible d'adresser des requêtes à la bibliothèque numérique pour en extraire les images en modifiant les paramètres de présentation. Par exemple, la requête https://bibliotheque-numerique.inha.fr/i/?IIIF=/b1/8b/1f/7d/b18b1f7d-1d95-4c21-abfe-27fa1f0d461f/iiif/0887_doucet_EMTOULOUSELAUTREC223GDF.tif/full/full/90/default.jpg renverra cette estampes de Toulouse-Lautrec avec une rotation horaire de 90°, la valeur 90 ayant été passée en paramètre {rotation}. Les URI à utiliser pour passer ces requêtes se trouvent dans les manifest des images. On peut trouver plus d'informations sur l'API Image en lisant ses <a href="https://iiif.io/api/image/2.1/">spécifications</a> sur le site du consortium IIIF.</p>
 								</div>
 							</section>
 							<section id="three">
@@ -101,7 +105,7 @@
 														<section id="four">
 								<div class="container">
 									<h3>Des cas d'utilisation</h3>
-									<p>Integer eu ante ornare amet commetus vestibulum blandit integer in curae ac faucibus integer non. Adipiscing cubilia elementum integer. Integer eu ante ornare amet commetus.</p>
+									<p>Le protocole IIIF est particulièrement intéressant pour des recherches en histoire de l'art car il permet d'effectuer des comparaisons entre oeuvres. </p>
 									<div class="features">
 										<article>
 											<a href="#" class="image"><img src="images/ex1.png" alt="" /></a>
